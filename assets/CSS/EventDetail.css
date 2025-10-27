@@ -1,0 +1,140 @@
+.Event-Detail {
+  margin: 80px 30px;
+  text-align: center;
+  position: fixed;
+  width: 95%;
+}
+
+.event-card {
+  background: linear-gradient(65deg, #a0deac, #6a9ace);
+  border-radius: 20px;
+  padding: 20px;
+  box-shadow: 0 6px 18px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.event-card:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.12);
+}
+
+.register,
+.back {
+  padding: 8px 20px;
+  border-radius: 20px;
+  margin: 0 10px 0 10px;
+  background: linear-gradient(45deg, #ffd86b, #ff7ab6);
+  color: #000;
+  font-weight: 600;
+  border: 2px solid #fff;
+  text-decoration: none;
+}
+
+.register:hover,
+.back:hover {
+  background: linear-gradient(90deg, #ff7ab6, #ffd86b);
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+}
+
+.event-title {
+  font-size: 2rem;
+  margin-bottom: 16px;
+  font-weight: 700;
+}
+
+.event-meta {
+  font-size: 1rem;
+  color: #000000;
+  margin-bottom: 20px;
+}
+
+.event-description {
+  font-size: 1rem;
+  line-height: 1.5;
+  color: #000000;
+  margin-bottom: 30px;
+}
+
+/* Not found styling */
+.not-found {
+  text-align: center;
+  padding: 50px 20px;
+}
+
+/* For Tablets (max-width: 768px) */
+@media (max-width: 768px) {
+  .Event-Detail {
+    margin: 80px auto;
+    padding: 15px;
+    width: 100%;
+  }
+
+  .event-card {
+    padding: 20px;
+  }
+
+  .event-card .p {
+    padding-bottom: 0px;
+  }
+
+  .btn-primary {
+    width: 90%;
+    margin-top: 15px;
+    padding: 6px 100px;
+  }
+
+  .event-card h1 {
+    font-size: 1.8rem;
+  }
+
+  .btn {
+    font-size: 1rem;
+    padding: 10px;
+    margin-top: 10px;
+  }
+
+  .event-card p {
+    font-size: 1rem;
+  }
+
+  .event-description {
+    font-size: 1rem;
+  }
+}
+
+/* For Small Mobiles (max-width: 480px) */
+@media (max-width: 480px) {
+  .Event-Detail {
+    margin: 60px auto;
+    padding: 8px;
+    width: 100%;
+  }
+
+  .event-card {
+    padding: 15px;
+    border-radius: 15px;
+  }
+
+  .event-card h1 {
+    font-size: 1.3rem;
+  }
+
+  .event-card p {
+    font-size: 0.7rem;
+  }
+
+  .event-description {
+    font-size: 0.7rem;
+    margin-bottom: 10px;
+  }
+
+  .btn {
+    font-size: 0.7rem;
+    padding: 5px;
+    margin-top: 5px;
+  }
+
+  .not-found {
+    padding: 40px 15px;
+  }
+}

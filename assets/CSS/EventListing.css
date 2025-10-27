@@ -1,0 +1,167 @@
+/* ---------------- Page Heading ---------------- */
+.Heading-2 {
+  padding-top: 50px;
+  font-size: 1.8rem;
+  text-align: center;
+  color: #000000;
+  font-weight: 700;
+}
+
+/* ---------------- Events Container ---------------- */
+.events-page.container {
+  padding: 0 30px 60px;
+}
+
+/* ---------------- Cards / Events Grid ---------------- */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+  margin-top: 20px;
+}
+
+.card {
+  background: linear-gradient(65deg, #82b0e1, #a0deac);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+  transform: translateY(-10px);
+  box-shadow: 0 18px 45px rgba(0, 0, 0, 0.22);
+}
+
+.event-card {
+  text-align: center;
+}
+
+.event-card h3 {
+  color: #000;
+  font-weight: 700;
+  margin-bottom: 8px;
+  font-size: 1.3rem;
+}
+
+.event-card p {
+  color: #222;
+  margin: 6px 0;
+  font-size: 0.95rem;
+}
+
+.event-card .p {
+  margin-top: 10px;
+  padding-bottom: 15px;
+  color: #333;
+  line-height: 1.4;
+}
+
+/* ---------------- Buttons ---------------- */
+.Create-Event,
+.btn.Create-Event {
+  background: linear-gradient(90deg, #ffd86b, #ff7ab6);
+  color: #000;
+  padding: 8px 20px;
+  border-radius: 25px;
+  text-decoration: none;
+  font-size: 16px;
+  font-weight: 600;
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  display: inline-block;
+  text-align: center;
+}
+
+.Create-Event:hover,
+.btn.Create-Event:hover {
+  background: linear-gradient(90deg, #ff7ab6, #ffd86b);
+  transform: scale(1.05);
+}
+
+/* ---------------- Empty / Loading States ---------------- */
+.events-page h2 {
+  text-align: center;
+  font-size: 1.8rem;
+  margin-top: 30px;
+}
+
+.no-events {
+  text-align: center;
+  font-size: 1.2rem;
+  margin-top: 50px;
+  color: #777;
+}
+
+/* ---------------- Filters Section ---------------- */
+.filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  margin: 30px 0;
+  background: linear-gradient(65deg, #82b0e1, #a0deac);
+  padding: 20px;
+  border-radius: 20px;
+  box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+}
+
+/* Input & Select Styles */
+.filters input,
+.filters select {
+  padding: 10px 14px;
+  font-size: 16px;
+  border-radius: 15px;
+  border: 2px solid #1985bf;
+  outline: none;
+  transition: all 0.3s ease;
+  background-color: #fff;
+  color: #000000;
+  min-width: 180px;
+}
+
+.filters input:focus,
+.filters select:focus {
+  border-color: #74ca92;
+    box-shadow: 0 0 8px rgba(116, 202, 146, 0.6);
+}
+
+/* Placeholder Text */
+.filters input::placeholder {
+  color: #000000;
+}
+
+/* ---------------- Responsive Filters ---------------- */
+@media (max-width: 768px) {
+  .filters {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .filters input,
+  .filters select {
+    width: 100%;
+  }
+}
+
+/* ---------------- Responsive Cards ---------------- */
+@media (max-width: 480px) {
+  .card {
+    padding: 15px;
+  }
+
+  .event-card h3 {
+    font-size: 1.1rem;
+  }
+
+  .event-card p {
+    font-size: 0.9rem;
+  }
+
+  .Create-Event {
+    font-size: 14px;
+    padding: 8px 14px;
+  }
+}

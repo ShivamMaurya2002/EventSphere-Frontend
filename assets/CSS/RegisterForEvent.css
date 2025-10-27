@@ -1,0 +1,164 @@
+/* Page Container */
+.register-page {
+  max-width: 450px;
+  margin: 80px auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: linear-gradient(65deg, #82b0e1, #a0deac);
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
+  text-align: center;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.register-page:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+}
+
+/* Heading */
+.register-page h2 {
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #000;
+  animation: fadeInDown 0.8s ease-in-out;
+}
+
+/* Form */
+.register-form {
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  animation: fadeIn 1.3s ease-in-out;
+  text-align: left;
+}
+
+.register-form label {
+  font-weight: 600;
+  font-size: 16px;
+  color: #000;
+}
+
+/* Inputs & Textarea */
+.register-form input,
+.register-form textarea {
+  padding: 10px 15px;
+  border: 2px solid #1985bf;
+  border-radius: 15px;
+  font-size: 16px;
+  transition: all 0.3s ease;
+  outline: none;
+  width: 100%;
+}
+
+.register-form input:focus,
+.register-form textarea:focus {
+  border-color: #74ca92;
+  box-shadow: 0 0 10px rgba(116, 202, 146, 0.6);
+  transform: scale(1.02);
+}
+
+/* Remove spinner for number input */
+.register-form input[type="number"] {
+  -moz-appearance: textfield;
+}
+.register-form input::-webkit-outer-spin-button,
+.register-form input::-webkit-inner-spin-button {
+  -webkit-appearance: none;
+  margin: 0;
+}
+
+/* Buttons */
+.register-form .btn-primary {
+  background: linear-gradient(90deg, #ffd86b, #ff7ab6);
+  color: #000;
+  font-weight: 600;
+  padding: 10px 20px;
+  border-radius: 20px;
+  border: 2px solid #fff;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-top: 10px;
+  text-align: center;
+}
+
+.register-form .btn-primary:hover {
+  background: linear-gradient(90deg, #ff7ab6, #ffd86b);
+}
+
+
+/* Not found or messages */
+.register-page .message {
+  font-size: 1rem;
+  color: #000;
+  margin-top: 15px;
+}
+
+/* Responsive Styling */
+@media screen and (max-width: 768px) {
+  .register-page {
+    margin: 70px auto;
+    padding: 30px;
+  }
+
+  .register-page h2 {
+    font-size: 1.4rem;
+  }
+
+  .register-form label,
+  .register-form input,
+  .register-form textarea,
+  .register-form .btn-primary,
+  .register-form .btn-secondary {
+    font-size: 0.8rem;
+  }
+
+  .register-form .btn-primary,
+  .register-form .btn-secondary {
+    width: 100%;
+    padding: 10px 0;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .register-page {
+    margin: 80px 20px;
+    padding: 20px;
+  }
+
+  .register-page h2 {
+    font-size: 1rem;
+  }
+
+  .register-form label,
+  .register-form input,
+  .register-form textarea {
+    font-size: 0.7rem;
+  }
+
+  .register-form .btn-primary,
+  .register-form .btn-secondary {
+    font-size: 0.8rem;
+    padding: 8px 0;
+  }
+}
+
+/* Animations */
+@keyframes fadeInDown {
+  0% {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  100% {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
